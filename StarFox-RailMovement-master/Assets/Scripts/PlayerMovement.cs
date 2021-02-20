@@ -8,6 +8,7 @@ using UnityEngine.Rendering.PostProcessing;
 public class PlayerMovement : MonoBehaviour
 {
     private Transform playerModel;
+    private EffectsScript effectsManager;
 
     [Header("Settings")]
     public bool joystick = true;
@@ -26,17 +27,11 @@ public class PlayerMovement : MonoBehaviour
     public CinemachineDollyCart dolly;
     public Transform cameraParent;
 
-    [Space]
-
-    [Header("Particles")]
-    public ParticleSystem trail;
-    public ParticleSystem circle;
-    public ParticleSystem barrel;
-    public ParticleSystem stars;
 
     void Start()
     {
         playerModel = transform.GetChild(0);
+        effectsManager = playerModel.GetChild(0).GetComponent<EffectsScript>();
         SetSpeed(forwardSpeed);
     }
 
@@ -110,7 +105,7 @@ public class PlayerMovement : MonoBehaviour
         if (!DOTween.IsTweening(playerModel))
         {
             playerModel.DOLocalRotate(new Vector3(playerModel.localEulerAngles.x, playerModel.localEulerAngles.y, 360 * -dir), .4f, RotateMode.LocalAxisAdd).SetEase(Ease.OutSine);
-            barrel.Play();
+            effectsManager.QuickSpin(dir);
         }
     }
 
@@ -146,15 +141,9 @@ public class PlayerMovement : MonoBehaviour
         if (state)
         {
             cameraParent.GetComponentInChildren<CinemachineImpulseSource>().GenerateImpulse();
-            trail.Play();
-            circle.Play();
         }
-        else
-        {
-            trail.Stop();
-            circle.Stop();
-        }
-        trail.GetComponent<TrailRenderer>().emitting = state;
+
+        effectsManager.Boost(state);
 
         float origFov = state ? 40 : 55;
         float endFov = state ? 55 : 40;
@@ -162,15 +151,12 @@ public class PlayerMovement : MonoBehaviour
         float endChrom = state ? 1 : 0;
         float origDistortion = state ? 0 : -30;
         float endDistorton = state ? -30 : 0;
-        float starsVel = state ? -20 : -1;
         float speed = state ? forwardSpeed * 2 : forwardSpeed;
         float zoom = state ? -7 : 0;
 
         DOVirtual.Float(origChrom, endChrom, .5f, Chromatic);
         DOVirtual.Float(origFov, endFov, .5f, FieldOfView);
         DOVirtual.Float(origDistortion, endDistorton, .5f, DistortionAmount);
-        var pvel = stars.velocityOverLifetime;
-        pvel.z = starsVel;
 
         DOVirtual.Float(dolly.m_Speed, speed, .15f, SetSpeed);
         SetCameraZoom(zoom, .4f);
