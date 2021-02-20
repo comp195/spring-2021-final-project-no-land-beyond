@@ -3,7 +3,7 @@
 ### Claryse Adams: c_adams18@u.pacific.edu
 
 ## Description
-A third-person shooter inspired by StarFox 64
+A third-person shooter video game inspired by StarFox 64
 
 ## Components
 - Windows PC
