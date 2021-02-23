@@ -6,7 +6,6 @@ public class EnemyScript : MonoBehaviour
 {
 	public GameObject player;
 	public Transform target; 
- 	public Transform projectile;
  
  	public float maximumLookDistance = 30;
  	public float maximumAttackDistance = 10;
