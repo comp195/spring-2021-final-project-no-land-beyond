@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Shoot : MonoBehaviour
 {
-
     public KeyCode shoot_key = KeyCode.Space;
     public GameObject projectile;
     public GameObject muzzleflash;
