@@ -9,6 +9,7 @@ public class Shoot : MonoBehaviour
     public GameObject muzzleflash;
     public float projectile_speed;
     public float fire_rate;
+    public bool automated; // is shooting done automatically (without input)?
 
     private float time_to_fire = 0;
 
@@ -25,14 +26,14 @@ public class Shoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(shoot_key) && Time.time >= time_to_fire)
+        if ((Input.GetKey(shoot_key) || automated) && Time.time >= time_to_fire)
         {
             time_to_fire = Time.time + 1 / fire_rate;
             GameObject shot = GameObject.Instantiate(projectile, transform.position, transform.rotation);
             GameObject muzzle = GameObject.Instantiate(muzzleflash, transform.position, transform.rotation);
             shot.GetComponent<Rigidbody>().AddForce(transform.forward * projectile_speed);
             var psMuzzle = muzzle.GetComponent<ParticleSystem>();
-            if (psMuzzle!= null)
+            if (psMuzzle != null)
             {
                 Destroy(muzzle, psMuzzle.main.duration);
             }
