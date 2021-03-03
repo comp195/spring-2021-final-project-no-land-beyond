@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 using DG.Tweening;
 using Cinemachine;
@@ -27,6 +28,14 @@ public class PlayerMovement : MonoBehaviour
     public CinemachineDollyCart dolly;
     public Transform cameraParent;
 
+    public float score = 0.0F;
+    public int health;
+    private int enemiesShot = 0;
+
+    public Text killsText; //displays enemies shot
+    public float timePassed = 0.0f; //gives player two minutes
+    public Text timerText; // used for showing time
+    public Text healthText;
 
     void Start()
     {
@@ -37,6 +46,12 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        timePassed += Time.deltaTime;
+        killsText.text = "Kills: " + enemiesShot; 
+        healthText.text = "Health: " + health; 
+        timerText.text = timePassed.ToString("0");
+
+
         float h = joystick ? Input.GetAxis("Horizontal") : Input.GetAxis("Mouse X");
         float v = joystick ? Input.GetAxis("Vertical") : Input.GetAxis("Mouse Y");
 
@@ -169,5 +184,26 @@ public class PlayerMovement : MonoBehaviour
 
         DOVirtual.Float(dolly.m_Speed, speed, .15f, SetSpeed);
         SetCameraZoom(zoom, .4f);
+    }
+
+    void TakeDamage(){
+        if(health > 0)
+            health--;
+    }
+
+    public void IncrementKills(){
+        enemiesShot++;
+    }
+
+    public void ComputeScore(){
+        score = enemiesShot;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Projectile bullet = other.gameObject.GetComponent<Projectile>(); 
+        if(bullet != null && !bullet.fromPlayer){
+            TakeDamage();
+        }
     }
 }
