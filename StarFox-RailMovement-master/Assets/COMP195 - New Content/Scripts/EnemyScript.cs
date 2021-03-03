@@ -61,4 +61,12 @@ public class EnemyScript : MonoBehaviour
     {
         transform.localPosition += new Vector3(x, y, 0) * speed * Time.deltaTime;
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+    	Projectile bullet = other.gameObject.GetComponent<Projectile>(); 
+        if(bullet != null && bullet.fromPlayer){
+        	Destroy(this.gameObject);
+        }
+    }
 }

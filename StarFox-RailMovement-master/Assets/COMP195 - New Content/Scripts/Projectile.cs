@@ -5,6 +5,7 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
     public GameObject impact;
+    public bool fromPlayer;
     // Start is called before the first frame update
     void Start()
     {
