@@ -67,6 +67,10 @@ public class EnemyScript : MonoBehaviour
     	Projectile bullet = other.gameObject.GetComponent<Projectile>(); 
         if(bullet != null && bullet.fromPlayer){
         	Destroy(this.gameObject);
+        	PlayerMovement player = FindObjectsOfType<PlayerMovement>()[0];
+        	if(player != null){
+        		player.IncrementKills();
+        	}
         }
     }
 }
