@@ -25367,7 +25367,7 @@ MonoBehaviour:
   shoot_key: 32
   projectile: {fileID: 1437870941}
   muzzleflash: {fileID: 1730600473738974789}
-  projectile_speed: 7500
+  projectile_speed: 8000
   fire_rate: 5
   automated: 0
   fromPlayer: 1
@@ -25879,7 +25879,7 @@ Transform:
   m_GameObject: {fileID: 1268688995}
   m_LocalRotation: {x: -0.02009729, y: 0.0008502404, z: -0.000017090986, w: 0.9997977}
   m_LocalPosition: {x: 0, y: 0, z: 10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children: []
   m_Father: {fileID: 959202325}
   m_RootOrder: 1
@@ -25924,7 +25924,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 528910309998686812, guid: b4b9c9e83c4201543a528876fe7615fd, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 1, b: 0.25882354, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -31327,7 +31327,7 @@ Transform:
   m_GameObject: {fileID: 2000582983}
   m_LocalRotation: {x: -0.02009729, y: 0.0008502404, z: -0.000017090986, w: 0.9997977}
   m_LocalPosition: {x: 0, y: 0, z: 20}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 959202325}
   m_RootOrder: 2
@@ -31372,7 +31372,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 528910309998686812, guid: b4b9c9e83c4201543a528876fe7615fd, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 1, b: 0.25882354, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
