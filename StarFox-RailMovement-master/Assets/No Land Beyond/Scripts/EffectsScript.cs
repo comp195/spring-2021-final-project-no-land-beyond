@@ -8,7 +8,7 @@ public class EffectsScript : MonoBehaviour
 	[Header("Particles")]
     public ParticleSystem trail;
     public ParticleSystem circle;
-    public ParticleSystem barrel;
+    // public ParticleSystem barrel;
     public ParticleSystem stars;
     // Start is called before the first frame update
     void Start()
@@ -43,6 +43,6 @@ public class EffectsScript : MonoBehaviour
 
     public void QuickSpin(int dir)
     {
-        barrel.Play();
+        // barrel.Play();
     }
 }
