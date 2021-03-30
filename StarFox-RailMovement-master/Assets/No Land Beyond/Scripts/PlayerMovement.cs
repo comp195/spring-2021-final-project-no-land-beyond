@@ -9,7 +9,7 @@ using UnityEngine.Rendering.PostProcessing;
 public class PlayerMovement : MonoBehaviour
 {
     private Transform playerModel;
-    private EffectsScript effectsManager;
+    public EffectsScript effectsManager;
 
     [Header("Settings")]
     public bool joystick = true;
@@ -40,7 +40,6 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         playerModel = transform.GetChild(0);
-        effectsManager = playerModel.GetChild(0).GetComponent<EffectsScript>();
         SetSpeed(forwardSpeed);
     }
 
