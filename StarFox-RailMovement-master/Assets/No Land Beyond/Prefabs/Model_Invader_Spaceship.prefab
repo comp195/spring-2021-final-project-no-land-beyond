@@ -1,5 +1,57 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &811571049928664352
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1786177055964959343}
+  - component: {fileID: 8724654201371070901}
+  m_Layer: 0
+  m_Name: Gun
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1786177055964959343
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 811571049928664352}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7429244378729548777}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8724654201371070901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 811571049928664352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ded0ff564d95364a8ffc4d1d82e96c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shoot_key: 32
+  projectile: {fileID: 3396129894576915571, guid: ca5b64140cec79b4ea5b85c395c0a9aa,
+    type: 3}
+  muzzleflash: {fileID: 1730600474574185266, guid: 710ac9386c714db41887dc9fd09affe0,
+    type: 3}
+  projectile_speed: 7500
+  fire_rate: 5
+  automated: 1
+  fromPlayer: 0
 --- !u!1 &7805348151611511123
 GameObject:
   m_ObjectHideFlags: 0
@@ -11,6 +63,7 @@ GameObject:
   - component: {fileID: 7429244378729548777}
   - component: {fileID: 5815873299740165196}
   - component: {fileID: 8598170733553774726}
+  - component: {fileID: 210716484956405696}
   m_Layer: 0
   m_Name: Model_Invader_Spaceship
   m_TagString: Untagged
@@ -28,7 +81,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -158.90231, y: 13.3999195, z: 105.34546}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1786177055964959343}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -79,3 +133,22 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &210716484956405696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7805348151611511123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a0f834b967558e428657e1c973771ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  maximumLookDistance: 30
+  maximumAttackDistance: 10
+  minimumDistanceFromPlayer: 2
+  rotationDamping: 2
+  enemySpeed: 12
+  turn_rate: 1
