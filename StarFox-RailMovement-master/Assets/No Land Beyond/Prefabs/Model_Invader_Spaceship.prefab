@@ -151,4 +151,4 @@ MonoBehaviour:
   minimumDistanceFromPlayer: 2
   rotationDamping: 2
   enemySpeed: 12
-  turn_rate: 1
+  turn_rate: 3

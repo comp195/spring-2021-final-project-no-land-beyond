@@ -46,7 +46,7 @@ public class EnemyScript : MonoBehaviour
 			moveY = Mathf.Pow(-1, turn_count) * Mathf.Clamp01(Random.value);
 			turn_count++;
 		}   
-		LocalMove(moveX, moveY, enemySpeed);
+		//LocalMove(moveX, moveY, enemySpeed);
     }
 
 	void LookAtTarget()
