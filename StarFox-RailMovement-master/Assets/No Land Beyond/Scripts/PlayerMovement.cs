@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using DG.Tweening;
 using Cinemachine;
 using UnityEngine.Rendering.PostProcessing;
@@ -188,6 +189,13 @@ public class PlayerMovement : MonoBehaviour
     void TakeDamage(){
         if(health > 0)
             health--;
+        else
+        	Die();
+    }
+
+    void Die(){
+    	//Death event
+    	SceneManager.LoadScene("Level 1");
     }
 
     public void IncrementKills(){

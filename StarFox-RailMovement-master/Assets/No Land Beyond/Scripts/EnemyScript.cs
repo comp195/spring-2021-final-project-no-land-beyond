@@ -20,6 +20,7 @@ public class EnemyScript : MonoBehaviour
  	private float moveY = 1.0F;
 
  	private int turn_count = 0;
+    public int health = 5;
 
 
 
@@ -66,11 +67,29 @@ public class EnemyScript : MonoBehaviour
     {
     	Projectile bullet = other.gameObject.GetComponent<Projectile>(); 
         if(bullet != null && bullet.fromPlayer){
-        	Destroy(this.gameObject);
-        	PlayerMovement player = FindObjectsOfType<PlayerMovement>()[0];
-        	if(player != null){
-        		player.IncrementKills();
-        	}
+            health--;
+            if(health == 0){
+                Die();
+            } 	
         }
+
+        //TODO: add additional triggerbox for a win gate
+
+        else if (other.gameObject.CompareTag("Player")){
+            Win();
+        }
+    }
+
+    private void Die(){
+        //Death Event
+        Destroy(this.gameObject);
+        PlayerMovement player = FindObjectsOfType<PlayerMovement>()[0];
+        if(player != null){
+            player.IncrementKills();
+    }
+}
+
+    void Win(){
+        //Win Event
     }
 }
