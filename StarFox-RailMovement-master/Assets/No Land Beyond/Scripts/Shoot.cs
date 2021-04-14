@@ -28,8 +28,8 @@ public class Shoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-    	//TODO: find out how to set powerUpCollision true if collided with powerup
-    	
+    	//TODO: find out how to set powerUpCollision true if collided with powerup (likely here or oncollision enter)
+
         if ((Input.GetKey(shoot_key) || automated) && Time.time >= time_to_fire)
         {
             time_to_fire = Time.time + 1 / fire_rate;
@@ -61,13 +61,14 @@ public class Shoot : MonoBehaviour
         Destroy(gameObject);
 
         if(powerUpCollision){
-        switch(powerUps):
+        switch(powerUps){
         	case 1:
         		//powerup 1
         	case 2: 
         		//powerup 2
         	case 3:
         		//powerup 3
+        }
         }
     }
 }
