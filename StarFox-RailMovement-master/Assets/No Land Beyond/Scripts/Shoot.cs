@@ -12,6 +12,8 @@ public class Shoot : MonoBehaviour
     public bool automated; // is shooting done automatically (without input)?
     public bool fromPlayer;
     private float time_to_fire = 0;
+    private int powerUps = 0;
+    private bool powerUpCollision = false;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +28,8 @@ public class Shoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+    	//TODO: find out how to set powerUpCollision true if collided with powerup
+    	
         if ((Input.GetKey(shoot_key) || automated) && Time.time >= time_to_fire)
         {
             time_to_fire = Time.time + 1 / fire_rate;
@@ -55,5 +59,15 @@ public class Shoot : MonoBehaviour
         Vector3 pos = contact.point;
         //Instantiate(explosionPrefab, pos, rot);
         Destroy(gameObject);
+
+        if(powerUpCollision){
+        switch(powerUps):
+        	case 1:
+        		//powerup 1
+        	case 2: 
+        		//powerup 2
+        	case 3:
+        		//powerup 3
+        }
     }
 }
