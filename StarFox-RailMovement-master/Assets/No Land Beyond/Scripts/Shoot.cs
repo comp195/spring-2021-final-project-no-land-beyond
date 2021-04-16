@@ -60,15 +60,15 @@ public class Shoot : MonoBehaviour
         //Instantiate(explosionPrefab, pos, rot);
         Destroy(gameObject);
 
-        if(powerUpCollision){
-        switch(powerUps){
-        	case 1:
-        		//powerup 1
-        	case 2: 
-        		//powerup 2
-        	case 3:
-        		//powerup 3
-        }
-        }
+        //if(powerUpCollision){
+        //switch(powerUps){
+        //	case 1:
+        //		//powerup 1
+        //	case 2: 
+        //		//powerup 2
+        //	case 3:
+        //		//powerup 3
+        //}
+        //}
     }
 }
