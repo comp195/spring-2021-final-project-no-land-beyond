@@ -30,7 +30,7 @@ public class Shoot : MonoBehaviour
     {
     	//TODO: find out how to set powerUpCollision true if collided with powerup (likely here or oncollision enter)
 
-        if ((Input.GetKey(shoot_key) || automated) && Time.time >= time_to_fire)
+        if ((Input.GetButton("Fire1") || automated) && Time.time >= time_to_fire)
         {
             time_to_fire = Time.time + 1 / fire_rate;
             GameObject shot = GameObject.Instantiate(projectile, transform.position, transform.rotation);
