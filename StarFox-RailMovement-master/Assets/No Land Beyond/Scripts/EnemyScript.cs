@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Cinemachine;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,6 +10,7 @@ public class EnemyScript : MonoBehaviour
  	public float maximumLookDistance = 30;
  	public float maximumAttackDistance = 10;
  	public float minimumDistanceFromPlayer = 2;
+    public CinemachineDollyCart dolly;
  
  	public float rotationDamping = 2;
 
@@ -47,7 +49,7 @@ public class EnemyScript : MonoBehaviour
 			moveY = Mathf.Pow(-1, turn_count) * Mathf.Clamp01(Random.value);
 			turn_count++;
 		}   
-		//LocalMove(moveX, moveY, enemySpeed);
+		LocalMove(moveX, moveY, enemySpeed);
     }
 
 	void LookAtTarget()
