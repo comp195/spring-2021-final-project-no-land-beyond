@@ -38,6 +38,8 @@ public class PlayerMovement : MonoBehaviour
     public Text timerText; // used for showing time
     public Text healthText;
 
+    private bool paused = false;
+
     void Start()
     {
         playerModel = transform.GetChild(0);
@@ -71,6 +73,15 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonUp("Fire3"))
             Break(false);
 
+        if (Input.GetButtonDown("Fire2"))
+            Pause();
+
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            TakeDamage();
+        }
+
+
         if (Input.GetButtonDown("TriggerL") || Input.GetButtonDown("TriggerR"))
         {
             int dir = Input.GetButtonDown("TriggerL") ? -1 : 1;
@@ -78,6 +89,18 @@ public class PlayerMovement : MonoBehaviour
         }
 
 
+    }
+
+    void Pause()
+    {
+    	if(!paused){
+    		Time.timeScale = 0;
+    		paused = true;
+    	}
+    	else{
+    		Time.timeScale = 1;
+    		paused = false;
+    	}
     }
 
     void LocalMove(float x, float y, float speed)
@@ -195,7 +218,8 @@ public class PlayerMovement : MonoBehaviour
 
     void Die(){
     	//Death event
-    	SceneManager.LoadScene("Level 1");
+    	Time.timeScale = 0;
+    	
     }
 
     public void IncrementKills(){
