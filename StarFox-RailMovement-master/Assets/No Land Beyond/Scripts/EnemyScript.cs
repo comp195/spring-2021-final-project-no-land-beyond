@@ -49,7 +49,7 @@ public class EnemyScript : MonoBehaviour
 			moveY = Mathf.Pow(-1, turn_count) * Mathf.Clamp01(Random.value);
 			turn_count++;
 		}   
-		LocalMove(moveX, moveY, enemySpeed);
+		transform.parent.localPosition += new Vector3(1, 0, 0) * enemySpeed * Time.deltaTime;
     }
 
 	void LookAtTarget()
