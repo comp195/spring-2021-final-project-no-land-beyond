@@ -41,7 +41,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8750551768769906546}
   m_LocalRotation: {x: 0.0006974326, y: 0.99809384, z: 0.060634, w: 0.0114804115}
+<<<<<<< HEAD
   m_LocalPosition: {x: 9.4, y: 3.3, z: 89.2}
+=======
+  m_LocalPosition: {x: 9.8, y: 37.5, z: 73.7}
+>>>>>>> 7227991... fixing merge conflicts
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8750551768770470729}
@@ -67,6 +71,7 @@ MonoBehaviour:
     width: 0.2
   m_Looped: 1
   m_Waypoints:
+<<<<<<< HEAD
   - position: {x: 1, y: 0, z: 0}
     roll: 0
   - position: {x: 1.9999999, y: 0, z: 22}
@@ -76,6 +81,17 @@ MonoBehaviour:
   - position: {x: 1, y: 5, z: 0}
     roll: 0
   - position: {x: 1, y: 0, z: 0}
+=======
+  - position: {x: 9.000002, y: 7.294985, z: 12.099745}
+    roll: 0
+  - position: {x: 0.00000059662165, y: 5.0000014, z: 24.343481}
+    roll: 0
+  - position: {x: 9.000001, y: 5.000003, z: 44.475796}
+    roll: 0
+  - position: {x: 9.000001, y: 0.00000056732426, z: 42.989346}
+    roll: 0
+  - position: {x: 9.000001, y: -0.00000021751123, z: 24.562838}
+>>>>>>> 7227991... fixing merge conflicts
     roll: 0
 --- !u!1 &8750551768770470735
 GameObject:
@@ -100,9 +116,15 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 8750551768770470735}
   m_LocalRotation: {x: -0.0006812007, y: 0.022709679, z: 0.000015473692, w: 0.9997419}
   m_LocalPosition: {x: 1.0000007, y: -0.0000002013985, z: 0.000002283603}
+=======
+  m_GameObject: {fileID: 597483483130820974}
+  m_LocalRotation: {x: 0.09007716, y: 0.26835978, z: -0.025212696, w: 0.95876664}
+  m_LocalPosition: {x: 9.199863, y: 4.935348, z: 44.801098}
+>>>>>>> 7227991... fixing merge conflicts
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1007907742613108514}
@@ -178,17 +200,29 @@ PrefabInstance:
     - target: {fileID: 8398363075849553629, guid: 2d6c59a449e3da64a8f9196addc4341a,
         type: 3}
       propertyPath: m_LocalPosition.x
+<<<<<<< HEAD
       value: -4.631175
+=======
+      value: 1.07
+>>>>>>> 7227991... fixing merge conflicts
       objectReference: {fileID: 0}
     - target: {fileID: 8398363075849553629, guid: 2d6c59a449e3da64a8f9196addc4341a,
         type: 3}
       propertyPath: m_LocalPosition.y
+<<<<<<< HEAD
       value: -1.9038873
+=======
+      value: -1.9
+>>>>>>> 7227991... fixing merge conflicts
       objectReference: {fileID: 0}
     - target: {fileID: 8398363075849553629, guid: 2d6c59a449e3da64a8f9196addc4341a,
         type: 3}
       propertyPath: m_LocalPosition.z
+<<<<<<< HEAD
       value: 25.223145
+=======
+      value: 0.53
+>>>>>>> 7227991... fixing merge conflicts
       objectReference: {fileID: 0}
     - target: {fileID: 8398363075849553629, guid: 2d6c59a449e3da64a8f9196addc4341a,
         type: 3}
@@ -349,17 +383,17 @@ PrefabInstance:
     - target: {fileID: 8398363075849553629, guid: 2d6c59a449e3da64a8f9196addc4341a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.211833
+      value: -1.92
       objectReference: {fileID: 0}
     - target: {fileID: 8398363075849553629, guid: 2d6c59a449e3da64a8f9196addc4341a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.9000382
+      value: -0.94
       objectReference: {fileID: 0}
     - target: {fileID: 8398363075849553629, guid: 2d6c59a449e3da64a8f9196addc4341a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 24.627638
+      value: -0.42
       objectReference: {fileID: 0}
     - target: {fileID: 8398363075849553629, guid: 2d6c59a449e3da64a8f9196addc4341a,
         type: 3}
@@ -499,17 +533,29 @@ PrefabInstance:
     - target: {fileID: 8398363075849553629, guid: 2d6c59a449e3da64a8f9196addc4341a,
         type: 3}
       propertyPath: m_LocalPosition.x
+<<<<<<< HEAD
       value: -1.8005636
+=======
+      value: -0.97
+>>>>>>> 7227991... fixing merge conflicts
       objectReference: {fileID: 0}
     - target: {fileID: 8398363075849553629, guid: 2d6c59a449e3da64a8f9196addc4341a,
         type: 3}
       propertyPath: m_LocalPosition.y
+<<<<<<< HEAD
       value: -1.9000919
+=======
+      value: -3.06
+>>>>>>> 7227991... fixing merge conflicts
       objectReference: {fileID: 0}
     - target: {fileID: 8398363075849553629, guid: 2d6c59a449e3da64a8f9196addc4341a,
         type: 3}
       propertyPath: m_LocalPosition.z
+<<<<<<< HEAD
       value: 25.66487
+=======
+      value: -0.25
+>>>>>>> 7227991... fixing merge conflicts
       objectReference: {fileID: 0}
     - target: {fileID: 8398363075849553629, guid: 2d6c59a449e3da64a8f9196addc4341a,
         type: 3}
