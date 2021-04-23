@@ -525,7 +525,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.y
       value: 0.03703579
-      objectReference: {fileID: 0}
     - target: {fileID: 8398363075849553629, guid: 2d6c59a449e3da64a8f9196addc4341a,
         type: 3}
       propertyPath: m_LocalRotation.z

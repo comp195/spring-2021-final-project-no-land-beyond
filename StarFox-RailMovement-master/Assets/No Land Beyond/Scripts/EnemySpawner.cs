@@ -27,7 +27,7 @@ public class EnemySpawner : MonoBehaviour
 
     void SpawnEnemy(){
     	spawnTime = Time.time;
-    	GameObject spawned = Instantiate(enemy, transform.position + spawnDist*Vector3.forward, Quaternion.identity, transform.parent);
+    	GameObject spawned = Instantiate(enemy, transform.position + spawnDist*Vector3.forward, Quaternion.Euler(0, 90, 0), transform.parent);
     	spawned.GetComponent<EnemyScript>().target = transform.parent.GetChild(0);
     }
 }
