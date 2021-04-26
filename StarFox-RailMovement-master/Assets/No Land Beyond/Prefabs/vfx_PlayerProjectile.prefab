@@ -3762,7 +3762,7 @@ ParticleSystem:
       properties: 0
       emitProbability: 1
   LightsModule:
-    enabled: 1
+    enabled: 0
     ratio: 0
     light: {fileID: 0}
     randomDistribution: 1
@@ -4830,8 +4830,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce6ace68a656ac540979938868386711, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  impact: {fileID: 0}
-  fromPlayer: 0
+  impact: {fileID: 480494681830416857, guid: 69f410d33d1e3d44592f5f341b78af14, type: 3}
+  fromPlayer: 1
 --- !u!1 &3396129894805713152
 GameObject:
   m_ObjectHideFlags: 0
@@ -8594,7 +8594,7 @@ ParticleSystem:
       properties: 0
       emitProbability: 1
   LightsModule:
-    enabled: 1
+    enabled: 0
     ratio: 0
     light: {fileID: 0}
     randomDistribution: 1
