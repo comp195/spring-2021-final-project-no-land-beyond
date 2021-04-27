@@ -45,7 +45,7 @@ public class PlayerMovement : MonoBehaviour
     //public Text healthText;
 
     private bool paused = false;
-    private bool collidingWithPowerUp = false;
+    public bool collidingWithPowerUp = false;
 
     void Start()
     {
@@ -258,16 +258,15 @@ public class PlayerMovement : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
     	RingScript powerUp = other.gameObject.GetComponent<RingScript>();
-    	if(powerUp == null && collidingWithPowerUp){
-        	collidingWithPowerUp = false;
-        }
+    	if(powerUp == null){
+    		collidingWithPowerUp = false;
+    	}
         Projectile bullet = other.gameObject.GetComponent<Projectile>(); 
         if(bullet != null && !bullet.fromPlayer){
             TakeDamage();
         }
         else{
         if(powerUp != null && !collidingWithPowerUp){
-        	collidingWithPowerUp = true;
         	bool firstUpgrade = upgrades == 0;
         	Debug.Log("powerup collision");
             UpgradeWeapon(firstUpgrade);

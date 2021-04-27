@@ -21,6 +21,7 @@ public class RingScript : MonoBehaviour
         {
             activated = true;
             transform.parent = other.transform.parent;
+            transform.parent.GetComponent<PlayerMovement>().collidingWithPowerUp = true;
 
             Sequence s = DOTween.Sequence();
 
