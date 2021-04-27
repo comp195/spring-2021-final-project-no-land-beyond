@@ -12,5 +12,9 @@ public class StartMenu : MonoBehaviour
         {
             SceneManager.LoadScene("Level 1");
         }
+        if (EventSystem.current.currentSelectedGameObject.name == "Tutorial")
+        {
+            SceneManager.LoadScene("SampleScene");
+        }
     }
 }

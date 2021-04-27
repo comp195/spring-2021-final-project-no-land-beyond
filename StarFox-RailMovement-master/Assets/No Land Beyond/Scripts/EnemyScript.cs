@@ -24,15 +24,6 @@ public class EnemyScript : MonoBehaviour
  	private int turn_count = 0;
     public int health = 5;
 
-
-
-
- 
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
-
     // Update is called once per frame
     void Update()
     {
