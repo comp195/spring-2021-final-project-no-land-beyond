@@ -6,7 +6,9 @@ public class Shoot : MonoBehaviour
 {
     public KeyCode shoot_key = KeyCode.Space;
     public GameObject projectile;
+    public GameObject coolerProjectile;
     public GameObject muzzleflash;
+    public GameObject coolerFlash;
     public float projectile_speed;
     public float fire_rate;
     public bool automated; // is shooting done automatically (without input)?
@@ -14,6 +16,7 @@ public class Shoot : MonoBehaviour
     private float time_to_fire = 0;
     private int powerUps = 0;
     private bool powerUpCollision = false;
+    private bool upgraded = false;
 
     // Start is called before the first frame update
     void Start()
@@ -48,6 +51,11 @@ public class Shoot : MonoBehaviour
                 Destroy(muzzle, psChild.main.duration);
             }
         }
+    }
+
+    public void UpgradeWeapon(){
+        projectile = coolerProjectile;
+        muzzleflash = coolerFlash;
     }
 
     void OnCollisionEnter(Collision collision)

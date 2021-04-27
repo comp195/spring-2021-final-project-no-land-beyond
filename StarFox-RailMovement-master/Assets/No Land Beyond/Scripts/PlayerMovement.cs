@@ -230,11 +230,23 @@ public class PlayerMovement : MonoBehaviour
         score = enemiesShot;
     }
 
+    public void UpgradeWeapon(){
+        Shoot gun = this.gameObject.transform.GetChild(0).GetChild(4).gameObject.GetComponent<Shoot>();
+        gun.UpgradeWeapon();
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         Projectile bullet = other.gameObject.GetComponent<Projectile>(); 
         if(bullet != null && !bullet.fromPlayer){
             TakeDamage();
+        }
+        else{
+        RingScript powerUp = other.gameObject.GetComponent<RingScript>();
+        if(powerUp != null){
+            UpgradeWeapon();
+        }
+
         }
     }
 }
