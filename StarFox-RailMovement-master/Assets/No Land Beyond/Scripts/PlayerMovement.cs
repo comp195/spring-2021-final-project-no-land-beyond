@@ -33,12 +33,19 @@ public class PlayerMovement : MonoBehaviour
     public int health;
     private int enemiesShot = 0;
 
+    public GameObject leftGun;
+    public GameObject rightGun;
+    public GameObject middleGun;
+
+    private int upgrades = 0;
+
     //public Text killsText; //displays enemies shot
     //public float timePassed = 0.0f; //gives player two minutes
     //public Text timerText; // used for showing time
     //public Text healthText;
 
     private bool paused = false;
+    private bool collidingWithPowerUp = false;
 
     void Start()
     {
@@ -230,21 +237,41 @@ public class PlayerMovement : MonoBehaviour
         score = enemiesShot;
     }
 
-    public void UpgradeWeapon(){
-        Shoot gun = this.gameObject.transform.GetChild(0).GetChild(4).gameObject.GetComponent<Shoot>();
-        gun.UpgradeWeapon();
+    public void UpgradeWeapon(bool firstUpgrade){
+        if(firstUpgrade){
+        	// two bullets instead of 1
+        	middleGun.SetActive(false);
+        	leftGun.SetActive(true);
+        	rightGun.SetActive(true);
+        	Debug.Log("upgrade 1");
+        }
+        else{
+        	// change bullets
+        	Shoot shoot1 = leftGun.gameObject.GetComponent<Shoot>();
+        	Shoot shoot2 = rightGun.gameObject.GetComponent<Shoot>();
+        	shoot1.UpgradeWeapon();
+        	shoot2.UpgradeWeapon();
+        	Debug.Log("upgrade 2");
+        }
     }
 
     private void OnTriggerEnter(Collider other)
     {
+    	RingScript powerUp = other.gameObject.GetComponent<RingScript>();
+    	if(powerUp == null && collidingWithPowerUp){
+        	collidingWithPowerUp = false;
+        }
         Projectile bullet = other.gameObject.GetComponent<Projectile>(); 
         if(bullet != null && !bullet.fromPlayer){
             TakeDamage();
         }
         else{
-        RingScript powerUp = other.gameObject.GetComponent<RingScript>();
-        if(powerUp != null){
-            UpgradeWeapon();
+        if(powerUp != null && !collidingWithPowerUp){
+        	collidingWithPowerUp = true;
+        	bool firstUpgrade = upgrades == 0;
+        	Debug.Log("powerup collision");
+            UpgradeWeapon(firstUpgrade);
+            upgrades++;
         }
 
         }
