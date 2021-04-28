@@ -6,6 +6,7 @@ public class Projectile : MonoBehaviour
 {
     public GameObject impact;
     public bool fromPlayer;
+    public AudioSource hit_sound;
     // Start is called before the first frame update
     void Start()
     {
@@ -35,7 +36,7 @@ public class Projectile : MonoBehaviour
                 Destroy(impactVFX, psChild.main.duration);
             }
         }
-
+        hit_sound.Play();
         Destroy(gameObject);
     }
 }

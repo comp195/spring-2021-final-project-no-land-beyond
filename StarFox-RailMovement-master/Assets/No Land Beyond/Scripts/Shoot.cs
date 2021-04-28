@@ -17,6 +17,7 @@ public class Shoot : MonoBehaviour
     private int powerUps = 0;
     private bool powerUpCollision = false;
     private bool upgraded = false;
+    public AudioSource pewpew;
 
     // Start is called before the first frame update
     void Start()
@@ -40,6 +41,7 @@ public class Shoot : MonoBehaviour
             projectile.GetComponent<Projectile>().fromPlayer = fromPlayer;
             GameObject muzzle = GameObject.Instantiate(muzzleflash, transform.position, transform.rotation);
             shot.GetComponent<Rigidbody>().AddForce(transform.forward * projectile_speed);
+            pewpew.Play();
             var psMuzzle = muzzle.GetComponent<ParticleSystem>();
             if (psMuzzle != null)
             {
@@ -67,16 +69,5 @@ public class Shoot : MonoBehaviour
         Vector3 pos = contact.point;
         //Instantiate(explosionPrefab, pos, rot);
         Destroy(gameObject);
-
-        //if(powerUpCollision){
-        //switch(powerUps){
-        //	case 1:
-        //		//powerup 1
-        //	case 2: 
-        //		//powerup 2
-        //	case 3:
-        //		//powerup 3
-        //}
-        //}
     }
 }

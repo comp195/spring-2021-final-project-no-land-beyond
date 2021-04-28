@@ -22,7 +22,8 @@ public class EnemyScript : MonoBehaviour
  	private float moveY = 1.0F;
 
  	private int turn_count = 0;
-    public int health = 5;
+    public int health = 3;
+    public AudioSource kill_sound;
 
     // Update is called once per frame
     void Update()
@@ -75,10 +76,11 @@ public class EnemyScript : MonoBehaviour
 
     private void Die(){
         //Death Event
-        Destroy(this.gameObject);
         PlayerMovement player = FindObjectsOfType<PlayerMovement>()[0];
         if(player != null){
             player.IncrementKills();
+            kill_sound.Play();
+        Destroy(this.gameObject);
     }
 }
 

@@ -46,6 +46,9 @@ public class PlayerMovement : MonoBehaviour
 
     private bool paused = false;
     public bool collidingWithPowerUp = false;
+    public AudioSource powerup_sound;
+    public AudioSource death_sound;
+    public AudioSource ouch;
 
     void Start()
     {
@@ -218,14 +221,18 @@ public class PlayerMovement : MonoBehaviour
 
     void TakeDamage(){
         if(health > 0)
-            health--;
+            {
+            	health--;
+            	ouch.Play();
+            }
         else
         	Die();
     }
 
     void Die(){
     	//Death event
-    	Time.timeScale = 0;
+    	death_sound.Play();
+    	//TODO: switch to death screen (if exists) or start menu
     	
     }
 
@@ -267,6 +274,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else{
         if(powerUp != null && !collidingWithPowerUp){
+        	powerup_sound.Play();
         	bool firstUpgrade = upgrades == 0;
         	Debug.Log("powerup collision");
             UpgradeWeapon(firstUpgrade);

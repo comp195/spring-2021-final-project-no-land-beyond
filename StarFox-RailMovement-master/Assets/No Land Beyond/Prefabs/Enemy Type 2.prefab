@@ -217,6 +217,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8835747202435783831}
   - component: {fileID: 1116029433206278129}
+  - component: {fileID: 8879951587038177165}
   m_Layer: 0
   m_Name: Enemy Type 2
   m_TagString: Untagged
@@ -262,7 +263,21 @@ MonoBehaviour:
   rotationDamping: 2
   enemySpeed: 25
   turn_rate: 5
-  health: 5
+  health: 2
+  kill_sound: {fileID: 0}
+--- !u!65 &8879951587038177165
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8202517172399261229}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 100, y: 100, z: 100}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8635254898532102350
 GameObject:
   m_ObjectHideFlags: 0
@@ -309,12 +324,15 @@ MonoBehaviour:
   shoot_key: 0
   projectile: {fileID: 7489896639390000681, guid: e0b0254189895f746adda0c22e44d38d,
     type: 3}
+  coolerProjectile: {fileID: 0}
   muzzleflash: {fileID: 6810098129192149476, guid: b7933efed0ea23d479ba2a625a5e3b3d,
     type: 3}
+  coolerFlash: {fileID: 0}
   projectile_speed: 4000
   fire_rate: 1
   automated: 1
   fromPlayer: 0
+  pewpew: {fileID: 0}
 --- !u!1 &9012925757220818553
 GameObject:
   m_ObjectHideFlags: 0
