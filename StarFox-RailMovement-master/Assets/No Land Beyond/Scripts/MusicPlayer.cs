@@ -10,6 +10,7 @@ public class MusicPlayer : MonoBehaviour
     void Start()
     {
         source = FindObjectOfType<AudioSource>();
+        source.volume = 0.5f;
         source.loop = false;
     }
 
