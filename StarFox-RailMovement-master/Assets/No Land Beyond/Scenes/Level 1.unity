@@ -18602,6 +18602,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1607974357706968120, guid: 322a637a7d300184981e0dda845673bd,
         type: 3}
+      propertyPath: barrel
+      value: 
+      objectReference: {fileID: 2077509985}
+    - target: {fileID: 1607974357706968120, guid: 322a637a7d300184981e0dda845673bd,
+        type: 3}
       propertyPath: boost_sound
       value: 
       objectReference: {fileID: 851638578}
@@ -44591,6 +44596,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6386709577941253136, guid: ef804f0258bd06346a74a0298ba8a52a,
     type: 3}
   m_PrefabInstance: {fileID: 2073401498}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &2077509985 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 7362678927438521559, guid: 322a637a7d300184981e0dda845673bd,
+    type: 3}
+  m_PrefabInstance: {fileID: 1003123186}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2081621594
 PrefabInstance:
