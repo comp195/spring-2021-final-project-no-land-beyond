@@ -8,11 +8,13 @@ public class Projectile : MonoBehaviour
     public bool fromPlayer;
     public AudioSource hit_sound;
     public bool muted;
+    private Rigidbody body;
     // Start is called before the first frame update
     void Start()
     {
         if(muted)
             hit_sound.volume = 0.0F;
+        body = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -27,6 +29,7 @@ public class Projectile : MonoBehaviour
         Quaternion rot = Quaternion.FromToRotation(Vector3.up, contact.normal);
         Vector3 pos = contact.point;
 
+        body.isKinematic = false;
         if (impact != null)
         {
             var impactVFX = Instantiate(impact, pos, rot);
@@ -38,8 +41,7 @@ public class Projectile : MonoBehaviour
                 var psChild = impactVFX.transform.GetChild(0).GetComponent<ParticleSystem>();
                 Destroy(impactVFX, psChild.main.duration);
             }
-        }
         hit_sound.Play();
-        Destroy(gameObject);
+        Destroy(gameObject);}
     }
 }
