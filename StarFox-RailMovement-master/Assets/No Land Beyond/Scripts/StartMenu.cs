@@ -14,7 +14,7 @@ public class StartMenu : MonoBehaviour
         }
         if (EventSystem.current.currentSelectedGameObject.name == "Tutorial")
         {
-            SceneManager.LoadScene("SampleScene");
+            SceneManager.LoadScene("Tutorial");
         }
     }
 }
