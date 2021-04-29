@@ -17,7 +17,7 @@ public class Shoot : MonoBehaviour
     private int powerUps = 0;
     private bool powerUpCollision = false;
     private bool upgraded = false;
-    public AudioSource pewpew;
+    public bool muted;
 
     // Start is called before the first frame update
     void Start()
@@ -38,10 +38,10 @@ public class Shoot : MonoBehaviour
         {
             time_to_fire = Time.time + 1 / fire_rate;
             GameObject shot = GameObject.Instantiate(projectile, transform.position, transform.rotation);
+            projectile.GetComponent<Projectile>().muted = muted;
             projectile.GetComponent<Projectile>().fromPlayer = fromPlayer;
             GameObject muzzle = GameObject.Instantiate(muzzleflash, transform.position, transform.rotation);
             shot.GetComponent<Rigidbody>().AddForce(transform.forward * projectile_speed);
-            pewpew.Play();
             var psMuzzle = muzzle.GetComponent<ParticleSystem>();
             if (psMuzzle != null)
             {
@@ -57,6 +57,7 @@ public class Shoot : MonoBehaviour
 
     public void UpgradeWeapon(){
         projectile = coolerProjectile;
+        coolerProjectile.GetComponent<Projectile>().muted = muted;
         muzzleflash = coolerFlash;
     }
 

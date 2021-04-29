@@ -9711,7 +9711,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   impact: {fileID: 3426738541405356278, guid: 3fdd4869250620749a81f034c6b6f645, type: 3}
   fromPlayer: 1
-  hit_sound: {fileID: 0}
+  hit_sound: {fileID: 6447466432799016953}
+  muted: 1
 --- !u!65 &5861528809372987309
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9735,7 +9736,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 34042699414d2984594e6a47a821c1a3, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 5d1058f20aa2fa54d9cb0927abed634b, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.5
   m_Pitch: 1

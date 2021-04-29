@@ -4820,7 +4820,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   impact: {fileID: 480494681830416857, guid: 69f410d33d1e3d44592f5f341b78af14, type: 3}
   fromPlayer: 1
-  hit_sound: {fileID: 0}
+  hit_sound: {fileID: 3972701071489100023}
+  muted: 1
 --- !u!82 &3972701071489100023
 AudioSource:
   m_ObjectHideFlags: 0

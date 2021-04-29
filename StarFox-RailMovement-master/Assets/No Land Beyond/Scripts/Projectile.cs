@@ -7,16 +7,19 @@ public class Projectile : MonoBehaviour
     public GameObject impact;
     public bool fromPlayer;
     public AudioSource hit_sound;
+    public bool muted;
     // Start is called before the first frame update
     void Start()
     {
-        
+        if(muted)
+            hit_sound.volume = 0.0F;
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        if(muted)
+            hit_sound.volume = 0.0F;
     }
     private void OnCollisionEnter(Collision collision)
     {
