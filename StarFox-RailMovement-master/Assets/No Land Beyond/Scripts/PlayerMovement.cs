@@ -39,10 +39,10 @@ public class PlayerMovement : MonoBehaviour
 
     private int upgrades = 0;
 
-    //public Text killsText; //displays enemies shot
-    //public float timePassed = 0.0f; //gives player two minutes
-    //public Text timerText; // used for showing time
-    //public Text healthText;
+    public Text killsText; //displays enemies shot
+    public float timePassed = 0.0f; //gives player two minutes
+    public Text timerText; // used for showing time
+    public Text healthText;
 
     private bool paused = false;
     public bool collidingWithPowerUp = false;
@@ -58,10 +58,10 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        //timePassed += Time.deltaTime;
-        //killsText.text = "Kills: " + enemiesShot; 
-        //healthText.text = "Health: " + health; 
-        //timerText.text = timePassed.ToString("0");
+        timePassed += Time.deltaTime;
+        killsText.text = "Kills: " + enemiesShot; 
+        healthText.text = "Health: " + health; 
+        timerText.text = timePassed.ToString("0");
 
 
         float h = joystick ? Input.GetAxis("Horizontal") : Input.GetAxis("Mouse X");
