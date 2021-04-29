@@ -5367,6 +5367,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   trail: {fileID: 1607974358750388117}
   circle: {fileID: 1607974357429209038}
+  barrel: {fileID: 7362678927438521559}
   stars: {fileID: 1607974358219012383}
   boost_sound: {fileID: 0}
 --- !u!1 &1607974357782119996
@@ -10583,8 +10584,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1607974358571852982}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 10}
-  m_LocalScale: {x: 1.5000007, y: 1.5, z: 1.5000005}
+  m_LocalPosition: {x: 0, y: 0, z: 15}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5000005}
   m_Children: []
   m_Father: {fileID: 1607974357798722151}
   m_RootOrder: 2
@@ -10722,7 +10723,7 @@ TrailRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b3f09af02ef841d4e8ef3ae18bd4ce8e, type: 2}
+  - {fileID: 2100000, guid: 20614648fd1ad8545b27101d1233d8ce, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -15546,7 +15547,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1607974358905087111}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 20}
+  m_LocalPosition: {x: 0, y: 0, z: 25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1607974357798722151}
@@ -15658,7 +15659,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1607974358975151760}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -15691,9 +15692,9 @@ MonoBehaviour:
   cameraParent: {fileID: 0}
   score: 0
   health: 10
-  leftGun: {fileID: 0}
-  rightGun: {fileID: 0}
-  middleGun: {fileID: 0}
+  leftGun: {fileID: 4264345055909356969}
+  rightGun: {fileID: 4366545410167589391}
+  middleGun: {fileID: 1607974358991012481}
   collidingWithPowerUp: 0
   powerup_sound: {fileID: 0}
   death_sound: {fileID: 0}
@@ -15773,14 +15774,14 @@ MonoBehaviour:
   shoot_key: 32
   projectile: {fileID: 3396129894576915571, guid: ca5b64140cec79b4ea5b85c395c0a9aa,
     type: 3}
-  coolerProjectile: {fileID: 7489896639390000681, guid: e0b0254189895f746adda0c22e44d38d,
+  coolerProjectile: {fileID: 5861528809372987280, guid: f9ce780a64d62d545a9255b663877791,
     type: 3}
   muzzleflash: {fileID: 1730600474574185266, guid: 710ac9386c714db41887dc9fd09affe0,
     type: 3}
-  coolerFlash: {fileID: 6810098129192149476, guid: b7933efed0ea23d479ba2a625a5e3b3d,
+  coolerFlash: {fileID: 8970745549078673369, guid: db2a8779b695b5045830e9a23ddc5543,
     type: 3}
   projectile_speed: 8000
-  fire_rate: 5
+  fire_rate: 6
   automated: 0
   fromPlayer: 1
   muted: 0
@@ -15876,7 +15877,7 @@ MonoBehaviour:
   coolerFlash: {fileID: 8970745549078673369, guid: db2a8779b695b5045830e9a23ddc5543,
     type: 3}
   projectile_speed: 8000
-  fire_rate: 5
+  fire_rate: 6
   automated: 0
   fromPlayer: 1
   muted: 0
@@ -15933,10 +15934,10 @@ MonoBehaviour:
   coolerFlash: {fileID: 8970745549078673369, guid: db2a8779b695b5045830e9a23ddc5543,
     type: 3}
   projectile_speed: 8000
-  fire_rate: 5
+  fire_rate: 6
   automated: 0
   fromPlayer: 1
-  muted: 0
+  muted: 1
 --- !u!1 &7800519586032088430
 GameObject:
   m_ObjectHideFlags: 0
