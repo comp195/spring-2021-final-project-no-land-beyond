@@ -78,8 +78,10 @@ public class EnemyScript : MonoBehaviour
     }
 
     IEnumerator Explode(){
-        var kaboom2 = Instantiate(kaboom, Vector3.up, Quaternion.identity);
-        kaboom.Play();
+        ParticleSystem kaboom2 = Instantiate(kaboom, Vector3.up, Quaternion.identity);
+        kaboom2.Play();
+        yield return new WaitForSeconds(3);
+        kaboom2.Stop();
         yield return null;
     }
 }
