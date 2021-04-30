@@ -78,6 +78,7 @@ public class EnemyScript : MonoBehaviour
     }
 
     IEnumerator Explode(){
+        var kaboom2 = Instantiate(kaboom, Vector3.up, Quaternion.identity);
         kaboom.Play();
         yield return null;
     }
