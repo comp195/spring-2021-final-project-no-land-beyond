@@ -7,23 +7,23 @@ public class EnemyScript : MonoBehaviour
 {
 	public Transform target; 
  
- 	public float maximumLookDistance = 30;
- 	public float maximumAttackDistance = 10;
- 	public float minimumDistanceFromPlayer = 2;
+ 	public float maximumLookDistance;
+ 	public float maximumAttackDistance;
+ 	public float minimumDistanceFromPlayer;
     public CinemachineDollyCart dolly;
  
- 	public float rotationDamping = 2;
+ 	public float rotationDamping;
 
  	public float enemySpeed;
  	public float turn_rate;
 
- 	private float time_to_turn = 0;
+ 	private float time_to_turn;
  	private float moveX = 1.0F;
  	private float moveY = 1.0F;
 
  	private int turn_count = 0;
-    public int health = 3;
-    public AudioSource kill_sound;
+    public int health;
+    public SoundFX sounds;
 
     // Update is called once per frame
     void Update()
@@ -79,7 +79,7 @@ public class EnemyScript : MonoBehaviour
         PlayerMovement player = FindObjectsOfType<PlayerMovement>()[0];
         if(player != null){
             player.IncrementKills();
-            kill_sound.Play();
+            sounds.Kill(true);
         Destroy(this.gameObject);
     }
 }

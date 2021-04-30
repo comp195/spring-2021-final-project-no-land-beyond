@@ -29,41 +29,29 @@ public class PlayerMovement : MonoBehaviour
     public CinemachineDollyCart dolly;
     public Transform cameraParent;
 
-    public float score = 0.0F;
-    public int health;
-    private int enemiesShot = 0;
-
     public GameObject leftGun;
     public GameObject rightGun;
     public GameObject middleGun;
 
-    private int upgrades = 0;
+    private int upgrades;
 
-    public Text killsText; //displays enemies shot
-    public float timePassed = 0.0f; //gives player two minutes
-    public Text timerText; // used for showing time
-    public Text healthText;
-
-    private bool paused = false;
+    private bool paused;
     public bool collidingWithPowerUp = false;
-    public AudioSource powerup_sound;
-    public AudioSource death_sound;
-    public AudioSource ouch;
+
+    public SoundFX sounds;
+
+    public HUD hud;
 
     void Start()
     {
+        upgrades = 0;
+        paused = false;
         playerModel = transform.GetChild(0);
         SetSpeed(forwardSpeed);
     }
 
     void Update()
     {
-        timePassed += Time.deltaTime;
-        killsText.text = "Kills: " + enemiesShot; 
-        healthText.text = "Health: " + health; 
-        timerText.text = timePassed.ToString("0");
-
-
         float h = joystick ? Input.GetAxis("Horizontal") : Input.GetAxis("Mouse X");
         float v = joystick ? Input.GetAxis("Vertical") : Input.GetAxis("Mouse Y");
 
@@ -220,28 +208,21 @@ public class PlayerMovement : MonoBehaviour
     }
 
     void TakeDamage(){
-        if(health > 0)
-            {
-            	health--;
-            	ouch.Play();
-            }
-        else
-        	Die();
+        hud.TakeDamage();
     }
 
     void Die(){
     	//Death event
-    	death_sound.Play();
     	//TODO: switch to death screen (if exists) or start menu
     	
     }
 
     public void IncrementKills(){
-        enemiesShot++;
+        hud.IncrementKills();
     }
 
     public void ComputeScore(){
-        score = enemiesShot;
+        hud.ComputeScore();
     }
 
     public void UpgradeWeapon(bool firstUpgrade){
@@ -270,11 +251,12 @@ public class PlayerMovement : MonoBehaviour
     	}
         Projectile bullet = other.gameObject.GetComponent<Projectile>(); 
         if(bullet != null && !bullet.fromPlayer){
+            sounds.Ouch(true);
             TakeDamage();
         }
         else{
         if(powerUp != null && !collidingWithPowerUp){
-        	powerup_sound.Play();
+        	sounds.PowerUp(true);
         	bool firstUpgrade = upgrades == 0;
         	Debug.Log("powerup collision");
             UpgradeWeapon(firstUpgrade);

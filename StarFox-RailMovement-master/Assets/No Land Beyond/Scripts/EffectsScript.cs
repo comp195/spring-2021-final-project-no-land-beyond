@@ -10,7 +10,7 @@ public class EffectsScript : MonoBehaviour
     public ParticleSystem circle;
     public ParticleSystem barrel;
     public ParticleSystem stars;
-    public AudioSource boost_sound;
+    public SoundFX sounds;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,13 +28,13 @@ public class EffectsScript : MonoBehaviour
 
         if (state)
         {
-            boost_sound.Play();
+            sounds.Boost(true);
             trail.Play();
             circle.Play();
         }
         else
         {
-            boost_sound.Stop();
+            sounds.Boost(false);
             trail.Stop();
             circle.Stop();
         }
