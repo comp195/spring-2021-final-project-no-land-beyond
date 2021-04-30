@@ -143,7 +143,7 @@ MonoBehaviour:
   enemySpeed: 25
   turn_rate: 0
   health: 3
-  kill_sound: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!65 &8594817417189062147
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -323,13 +323,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ded0ff564d95364a8ffc4d1d82e96c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shoot_key: 0
+  shoot_key: 323
   projectile: {fileID: 7489896639390000681, guid: e0b0254189895f746adda0c22e44d38d,
     type: 3}
-  coolerProjectile: {fileID: 0}
+  coolerProjectile: {fileID: 5861528809372987280, guid: f9ce780a64d62d545a9255b663877791,
+    type: 3}
   muzzleflash: {fileID: 6810098129192149476, guid: b7933efed0ea23d479ba2a625a5e3b3d,
     type: 3}
-  coolerFlash: {fileID: 0}
+  coolerFlash: {fileID: 8970745549078673369, guid: db2a8779b695b5045830e9a23ddc5543,
+    type: 3}
   projectile_speed: 0
   fire_rate: 0
   automated: 1
