@@ -24,6 +24,8 @@ public class EnemyScript : MonoBehaviour
     public int health;
     public SoundFX sounds;
 
+    public ParticleSystem kaboom;
+
     // Update is called once per frame
     void Update()
     {
@@ -66,11 +68,16 @@ public class EnemyScript : MonoBehaviour
         if(player != null){
             player.IncrementKills();
             sounds.Kill(true);
+            StartCoroutine("Explode");
         Destroy(this.gameObject);
     }
 }
 
     void Win(){
         //Win Event
+    }
+
+    IEnumerator Explode(){
+        kaboom.Play();
     }
 }
