@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2799957948335261869}
-  - component: {fileID: 4123035510556746762}
+  - component: {fileID: 6109654606742459510}
   m_Layer: 0
   m_Name: Sounds
   m_TagString: Untagged
@@ -31,7 +31,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4123035510556746762
+--- !u!114 &6109654606742459510
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -43,9 +43,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d114b530de0ac54087a624c8c498bb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boost: {fileID: 0}
-  powerup: {fileID: 0}
-  deaths: {fileID: 0}
-  ouch: {fileID: 0}
-  hits: {fileID: 0}
-  kills: {fileID: 0}
+  boost: {fileID: 4620872936799837872, guid: c28f71f97f1d9bc48bfb9ee9ff6e929a, type: 3}
+  powerup: {fileID: 2485890340174544607, guid: 03efad7b51dc6524ca52be4659684459, type: 3}
+  deaths: {fileID: 7538066171056447545, guid: b759d6ebaae7bc442851023b0dd7d11d, type: 3}
+  ouch: {fileID: 2124631640289137946, guid: 1e9c29375b4eda3428e6e4f47452f912, type: 3}
+  hits: {fileID: 4088235759843133304, guid: 6960bebba06f4e4459ffda213fa2ff19, type: 3}
+  kills: {fileID: 9046295668675430750, guid: 1ba91182ccaf2e34bb6af06b26e739e5, type: 3}

@@ -10,10 +10,11 @@ public class SoundFX : MonoBehaviour
     public AudioSource ouch;
     public AudioSource hits;
     public AudioSource kills;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame

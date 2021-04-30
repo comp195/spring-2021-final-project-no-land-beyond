@@ -42,6 +42,11 @@ public class PlayerMovement : MonoBehaviour
 
     public HUD hud;
 
+    void Awake(){
+        if(hud == null){
+            hud = new HUD();
+        }
+    }
     void Start()
     {
         upgrades = 0;
