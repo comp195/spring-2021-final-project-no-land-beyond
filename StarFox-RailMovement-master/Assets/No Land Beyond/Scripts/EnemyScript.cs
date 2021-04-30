@@ -79,5 +79,6 @@ public class EnemyScript : MonoBehaviour
 
     IEnumerator Explode(){
         kaboom.Play();
+        yield return null;
     }
 }
