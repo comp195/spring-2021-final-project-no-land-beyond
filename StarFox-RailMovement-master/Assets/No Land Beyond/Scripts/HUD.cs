@@ -30,7 +30,6 @@ public class HUD : MonoBehaviour
     }
 
     public void TakeDamage(){
-        Debug.Log("hud damage");
         if(health > 0)
             {
                 health-=5;

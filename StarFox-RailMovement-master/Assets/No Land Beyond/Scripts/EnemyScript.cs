@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class EnemyScript : MonoBehaviour
 {
-	public Transform target; 
  
  	public float maximumLookDistance;
  	public float maximumAttackDistance;
@@ -28,11 +27,6 @@ public class EnemyScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float distance = Vector3.Distance(target.position, transform.position); 
-		if(distance <= maximumLookDistance)
-		{
-			LookAtTarget();
-		}
 
 		if(Time.time >= time_to_turn)
 		{
@@ -43,14 +37,6 @@ public class EnemyScript : MonoBehaviour
 		}   
 		transform.parent.localPosition += new Vector3(1, 0, 0) * enemySpeed * Time.deltaTime;
     }
-
-	void LookAtTarget()
-	{
-		Vector3 dir = target.position - transform.position;
-		//dir.y = 0;
-		Quaternion rotation = Quaternion.LookRotation(dir);
-		transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * rotationDamping);
-	}
 
 	void LocalMove(float x, float y, float speed)
     {

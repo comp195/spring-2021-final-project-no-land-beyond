@@ -231,7 +231,6 @@ public class PlayerMovement : MonoBehaviour
         	middleGun.SetActive(false);
         	leftGun.SetActive(true);
         	rightGun.SetActive(true);
-        	Debug.Log("upgrade 1");
         }
         else{
         	// change bullets
@@ -239,7 +238,6 @@ public class PlayerMovement : MonoBehaviour
         	Shoot shoot2 = rightGun.gameObject.GetComponent<Shoot>();
         	shoot1.UpgradeWeapon();
         	shoot2.UpgradeWeapon();
-        	Debug.Log("upgrade 2");
         }
     }
 
@@ -258,7 +256,6 @@ public class PlayerMovement : MonoBehaviour
         if(powerUp != null && !collidingWithPowerUp){
         	sounds.PowerUp(true);
         	bool firstUpgrade = upgrades == 0;
-        	Debug.Log("powerup collision");
             UpgradeWeapon(firstUpgrade);
             upgrades++;
         }
