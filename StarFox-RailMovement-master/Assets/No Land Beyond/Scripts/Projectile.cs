@@ -9,7 +9,6 @@ public class Projectile : MonoBehaviour
     public AudioSource hit_sound;
     public bool muted;
     private Rigidbody body;
-    public GameObject explosion;
     // Start is called before the first frame update
     void Start()
     {
@@ -45,12 +44,5 @@ public class Projectile : MonoBehaviour
         hit_sound.Play();
         Destroy(gameObject);}
     }
+}
 
-    private void OnTriggerEnter(Collider other) {
-    if (other.tag == "Enemy") {
-    GameObject e = Instantiate(explosion) as GameObject;
-    e.transform.position = transform.position;
-    Destroy(other.gameObject);
-  }
-}
-}

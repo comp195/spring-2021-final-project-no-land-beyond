@@ -37,7 +37,7 @@ public class EnemyScript : MonoBehaviour
 			moveY = Mathf.Pow(-1, turn_count) * Mathf.Clamp01(Random.value);
 			turn_count++;
 		}   
-		transform.parent.localPosition += new Vector3(1, 0, 0) * enemySpeed * Time.deltaTime;
+		//transform.parent.localPosition += new Vector3(1, 0, 0) * enemySpeed * Time.deltaTime;
     }
 
 	void LocalMove(float x, float y, float speed)
@@ -47,7 +47,7 @@ public class EnemyScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-    	/*Projectile bullet = other.gameObject.GetComponent<Projectile>(); 
+    	Projectile bullet = other.gameObject.GetComponent<Projectile>(); 
         if(bullet != null && bullet.fromPlayer){
             health--;
             if(health == 0){
@@ -55,21 +55,17 @@ public class EnemyScript : MonoBehaviour
             } 	
         }
 
-        //TODO: add additional triggerbox for a win gate
-
-        else if (other.gameObject.CompareTag("Player")){
-            Win();
-        }*/
     }
 
     private void Die(){
         //Death Event
-        /*PlayerMovement player = FindObjectsOfType<PlayerMovement>()[0];
+        PlayerMovement player = FindObjectsOfType<PlayerMovement>()[0];
         if(player != null){
             player.IncrementKills();
             sounds.Kill(true);
-            StartCoroutine("Explode");
-        Destroy(this.gameObject);*/
+        }
+           Instantiate(kaboom, transform.position, transform.rotation);
+            Destroy (gameObject, 10f);
     }
 }
 
