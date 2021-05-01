@@ -19,16 +19,6 @@ public class Shoot : MonoBehaviour
     private bool upgraded = false;
     public bool muted;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        //if (muzzleflash != null)
-        //{
-        //    var muzzleVFX = Instantiate(muzzleflash, transform.position, Quaternion.identity);
-        //    muzzleVFX.transform.forward = gameObject.transform.forward;
-        //}
-    }
-
     // Update is called once per frame
     void Update()
     {
