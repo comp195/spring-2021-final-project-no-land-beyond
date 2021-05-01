@@ -222,6 +222,14 @@ public class PlayerMovement : MonoBehaviour
     	
     }
 
+    public void Explode() {
+        ParticleSystem exp = GetComponent<ParticleSystem>();
+        exp.Play();
+        Destroy(playerModel);
+
+        Destroy(gameObject, 5f);
+    }
+
     public void IncrementKills(){
         hud.IncrementKills();
     }

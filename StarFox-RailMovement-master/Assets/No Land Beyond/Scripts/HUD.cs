@@ -39,9 +39,15 @@ public class HUD : MonoBehaviour
     }
 
     public void Die(){
-        //Death event
+        StartCoroutine("WaitForDie");
         //Time.timeScale = 0;
         
+    }
+
+    IEnumerator WaitForDie(){
+        PlayerMovement player = FindObjectsOfType<PlayerMovement>()[0];
+        player.Explode();
+        yield return new WaitForSeconds(10f);
     }
 
     public void IncrementKills(){
