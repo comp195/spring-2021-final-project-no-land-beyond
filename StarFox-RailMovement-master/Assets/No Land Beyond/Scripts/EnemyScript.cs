@@ -47,7 +47,7 @@ public class EnemyScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-    	Projectile bullet = other.gameObject.GetComponent<Projectile>(); 
+    	/*Projectile bullet = other.gameObject.GetComponent<Projectile>(); 
         if(bullet != null && bullet.fromPlayer){
             health--;
             if(health == 0){
@@ -59,29 +59,18 @@ public class EnemyScript : MonoBehaviour
 
         else if (other.gameObject.CompareTag("Player")){
             Win();
-        }
+        }*/
     }
 
     private void Die(){
         //Death Event
-        PlayerMovement player = FindObjectsOfType<PlayerMovement>()[0];
+        /*PlayerMovement player = FindObjectsOfType<PlayerMovement>()[0];
         if(player != null){
             player.IncrementKills();
             sounds.Kill(true);
             StartCoroutine("Explode");
-        Destroy(this.gameObject);
+        Destroy(this.gameObject);*/
     }
 }
 
-    void Win(){
-        //Win Event
-    }
 
-    IEnumerator Explode(){
-        ParticleSystem kaboom2 = Instantiate(kaboom, Vector3.up, Quaternion.identity);
-        kaboom2.Play();
-        yield return new WaitForSeconds(3);
-        kaboom2.Stop();
-        yield return null;
-    }
-}

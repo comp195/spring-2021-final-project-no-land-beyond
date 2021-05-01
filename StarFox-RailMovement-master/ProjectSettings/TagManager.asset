@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Beeg Boi
+  - Enemy
   layers:
   - Default
   - TransparentFX

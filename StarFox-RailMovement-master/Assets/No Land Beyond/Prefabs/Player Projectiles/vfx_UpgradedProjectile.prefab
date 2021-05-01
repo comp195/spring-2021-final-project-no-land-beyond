@@ -9657,6 +9657,7 @@ GameObject:
   - component: {fileID: 5861528809372987308}
   - component: {fileID: 6447466432799016953}
   - component: {fileID: 5861528809372987309}
+  - component: {fileID: -6510186450865599732}
   m_Layer: 0
   m_Name: vfx_UpgradedProjectile
   m_TagString: Untagged
@@ -9821,4 +9822,17 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.6, y: 0.6, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &-6510186450865599732
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5861528809372987280}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
