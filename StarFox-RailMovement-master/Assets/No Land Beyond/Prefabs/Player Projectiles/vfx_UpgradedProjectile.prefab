@@ -9660,7 +9660,7 @@ GameObject:
   - component: {fileID: -6510186450865599732}
   m_Layer: 0
   m_Name: vfx_UpgradedProjectile
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

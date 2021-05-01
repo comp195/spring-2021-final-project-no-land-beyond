@@ -63,9 +63,9 @@ public class EnemyScript : MonoBehaviour
         if(player != null){
             player.IncrementKills();
             sounds.Kill(true);
-        }
-           Instantiate(kaboom, transform.position, transform.rotation);
+            Instantiate(kaboom, transform.position, transform.rotation);
             Destroy (gameObject, 10f);
+        }
     }
 }
 
