@@ -40,7 +40,7 @@ public class HUD : MonoBehaviour
 
     public void Die(){
         //Death event
-        //TODO: switch to death screen (if exists) or start menu
+        //Time.timeScale = 0;
         
     }
 

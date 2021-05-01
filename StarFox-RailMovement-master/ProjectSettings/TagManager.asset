@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Beeg Boi
   - Enemy
+  - Projectile
   layers:
   - Default
   - TransparentFX

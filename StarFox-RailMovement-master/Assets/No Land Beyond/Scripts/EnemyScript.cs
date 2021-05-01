@@ -45,6 +45,15 @@ public class EnemyScript : MonoBehaviour
         transform.localPosition += new Vector3(x, y, 0) * speed * Time.deltaTime;
     }
 
+    void Explode() {
+        ParticleSystem exp = GetComponent<ParticleSystem>();
+        exp.Play();
+        foreach (Transform child in transform) {
+            GameObject.Destroy(child.gameObject);
+        }
+        Destroy(gameObject, 5f);
+    }
+
     private void OnTriggerEnter(Collider other)
     {
     	Projectile bullet = other.gameObject.GetComponent<Projectile>(); 
@@ -63,8 +72,7 @@ public class EnemyScript : MonoBehaviour
         if(player != null){
             player.IncrementKills();
             sounds.Kill(true);
-            Instantiate(kaboom, transform.position, transform.rotation);
-            Destroy (gameObject, 10f);
+            Explode();
         }
     }
 }
