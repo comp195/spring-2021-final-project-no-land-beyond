@@ -136,16 +136,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a0f834b967558e428657e1c973771ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maximumLookDistance: 0
-  maximumAttackDistance: 0
+  maximumLookDistance: 100
+  maximumAttackDistance: 100
   minimumDistanceFromPlayer: 2
-  dolly: {fileID: 0}
+  dolly: {fileID: 1525962223522960940, guid: f93221bdd5bce584f9629f623c6cea0f, type: 3}
   rotationDamping: 2
   enemySpeed: 25
-  turn_rate: 0
+  turn_rate: 5
   health: 3
-  sounds: {fileID: 0}
-  kaboom: {fileID: 0}
+  sounds: {fileID: 6109654606742459510, guid: 7d683cb4447dd9c44a9cc5c82bd1e1a7, type: 3}
+  kaboom: {fileID: 198357973136645638, guid: 67a684e320da6e7439421a07e3fa265c, type: 3}
 --- !u!65 &8594817417189062147
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5055,8 +5055,8 @@ MonoBehaviour:
     type: 3}
   coolerFlash: {fileID: 8970745549078673369, guid: db2a8779b695b5045830e9a23ddc5543,
     type: 3}
-  projectile_speed: 0
-  fire_rate: 0
+  projectile_speed: 1000
+  fire_rate: 1
   automated: 1
   fromPlayer: 0
   muted: 0

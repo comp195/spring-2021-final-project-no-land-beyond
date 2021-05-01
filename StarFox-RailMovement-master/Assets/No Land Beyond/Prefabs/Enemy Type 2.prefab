@@ -9999,13 +9999,13 @@ MonoBehaviour:
   maximumLookDistance: 30
   maximumAttackDistance: 10
   minimumDistanceFromPlayer: 2
-  dolly: {fileID: 0}
+  dolly: {fileID: 1525962223522960940, guid: f93221bdd5bce584f9629f623c6cea0f, type: 3}
   rotationDamping: 2
   enemySpeed: 25
   turn_rate: 5
   health: 2
-  sounds: {fileID: 0}
-  kaboom: {fileID: 0}
+  sounds: {fileID: 6109654606742459510, guid: 7d683cb4447dd9c44a9cc5c82bd1e1a7, type: 3}
+  kaboom: {fileID: 198357973136645638, guid: 67a684e320da6e7439421a07e3fa265c, type: 3}
 --- !u!65 &8879951587038177165
 BoxCollider:
   m_ObjectHideFlags: 0
