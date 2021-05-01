@@ -94,10 +94,9 @@ GameObject:
   - component: {fileID: 2798404169100445986}
   - component: {fileID: 8819688435127956960}
   - component: {fileID: 8594817417189062147}
-  - component: {fileID: 7980114126227486750}
   m_Layer: 0
   m_Name: Enemy Type 1
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -159,37 +158,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 25, y: 25, z: 25}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7980114126227486750
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3287132327117067160}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a6b66ac7a5da19478fe0bac9273906d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  destroy_after: 1
-  has_delay: 1
-  interact_with_tag: 1
-  events:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 376160105942734088}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-  delay_time: 1
-  interact_tag: Projectile
 --- !u!1 &3535853197040511186
 GameObject:
   m_ObjectHideFlags: 0
@@ -10345,14 +10313,38 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 198320247807911846, guid: 67a684e320da6e7439421a07e3fa265c,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198357973136645638, guid: 67a684e320da6e7439421a07e3fa265c,
+        type: 3}
+      propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198357973136645638, guid: 67a684e320da6e7439421a07e3fa265c,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198426081105753050, guid: 67a684e320da6e7439421a07e3fa265c,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198559278997166938, guid: 67a684e320da6e7439421a07e3fa265c,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198794646228705736, guid: 67a684e320da6e7439421a07e3fa265c,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 67a684e320da6e7439421a07e3fa265c, type: 3}
---- !u!1 &376160105942734088 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1845955007268882, guid: 67a684e320da6e7439421a07e3fa265c,
-    type: 3}
-  m_PrefabInstance: {fileID: 378000541769866522}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &373477421171470552 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4563802948693442, guid: 67a684e320da6e7439421a07e3fa265c,
