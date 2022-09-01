@@ -1,6 +1,6 @@
 # NO LAND BEYOND
 
-## Demo located [here](https://comp195.github.io/spring-2021-final-project-no-land-beyond/)
+## Try it out [HERE](https://comp195.github.io/spring-2021-final-project-no-land-beyond/)
 
 ### Alex Almanza: a_almanza@u.pacific.edu
 ### Claryse Adams: c_adams18@u.pacific.edu
